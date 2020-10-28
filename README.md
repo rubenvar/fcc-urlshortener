@@ -1,4 +1,4 @@
-# FCC URL SHortener
+# FCC URL Shortener
 
 This app will shorten any URL that you can pass as a parameter. It will return original + shortened urls in a JSON response.
 
