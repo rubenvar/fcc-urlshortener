@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>freeCodeCamp URL Shortener Microservice</title>
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>freeCodeCamp URL Shortener Microservice</h1>
+      <p>
+        You can post a valid URL below an get a JSON response with your original
+        url and a short url.
+      </p>
+      <p>
+        If you visit the short url, it will redirect you to your original url.
+      </p>
+      <p>
+        If you pass an invalid url you will get a
+        <code>{ error: 'invalid url' }</code> response.
+      </p>
+      <form action="/api/shorturl/new" method="POST">
+        <fieldset>
+          <legend>URL Shortener</legend>
+          <label for="url_input">URL:</label>
+          <input
+            id="url_input"
+            type="text"
+            name="input"
+            placeholder="https://rubenvara.io/"
+          />
+          <button type="submit">✂️ Shorten my URL!</button>
+        </fieldset>
+      </form>
+    </main>
+    <footer>By <a href="https://rubenvara.io" target="_blank">Rubén</a></footer>
+  </body>
+</html>
