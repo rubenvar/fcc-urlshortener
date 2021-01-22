@@ -29,7 +29,6 @@ app.get('/', (req, res) => res.sendFile(`${__dirname}/views/index.html`));
 app.post('/api/shorturl/new', async (req, res, next) => {
   const input = req.body.url;
   // if input is not a valid url, return
-  console.log(input);
   if (!isUrl(input)) return res.json({ error: 'invalid url', input });
   // if it is, first check if the url is already in db
   const existing = await Url.findOne({ original: input });
